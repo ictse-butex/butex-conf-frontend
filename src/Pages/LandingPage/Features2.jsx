@@ -13,7 +13,7 @@ const Features2 = () => {
                     font-medium text-white bg-[#357F70] border shadow-xl
                      border-[#357F70] rounded-full active:text-[#50bea8] hover:bg-transparent hover:text-[#357F70] 
                     focus:outline-none text-sm sm:text-base md:text-base lg:text-base "
-                            href="#">
+                            href="/registration">
                             Register Now
                         </a>
                     </div>

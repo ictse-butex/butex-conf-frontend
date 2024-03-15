@@ -17,7 +17,7 @@ const NavBar = () => {
                         <li><Link className='text-[#357F70] font-medium'>CALL FOR PAPERS</Link></li>
                         {/* <li><Link className='text-[#357F70] font-medium'>SPEAKERS</Link></li> */}
                         <li><Link className='text-[#357F70] font-medium'>IMPORTANT DATES</Link></li>
-                        <li><Link className='text-[#357F70] font-medium'>REGISTRATION</Link></li>
+                        {/* <li><Link className='text-[#357F70] font-medium'>REGISTRATION</Link></li> */}
                         <li><Link className='text-[#357F70] font-medium'>PROCEEDINGS</Link></li>
                         <li><Link className='text-[#357F70] font-medium'>COMMITTEES</Link></li>
                         <li><Link className='text-[#357F70] font-medium'>IMPORTANT LINKS</Link></li>
@@ -32,7 +32,7 @@ const NavBar = () => {
                     font-medium text-white bg-[#357F70] border shadow-xl
                      border-[#357F70] rounded-full active:text-[#50bea8] hover:bg-transparent hover:text-[#357F70] 
                     focus:outline-none text-sm sm:text-base md:text-base lg:text-base "
-                        href="#">
+                        href="registration">
                         Register Now
                     </a>
                     {/* <div
@@ -52,7 +52,7 @@ const NavBar = () => {
                         <li><Link to="/" className='text-[#357F70] font-medium'>HOME</Link></li>
                         <li><Link to="/callforpapers" className='text-[#357F70] font-medium'>CALL FOR PAPERS</Link></li>
                         {/* <li><Link to="/speakers" className='text-[#357F70] font-medium'>SPEAKERS</Link></li> */}
-                        <li><Link to="/registration" className='text-[#357F70] font-medium'>REGISTRATION</Link></li>
+                        {/* <li><Link to="/registration" className='text-[#357F70] font-medium'>REGISTRATION</Link></li> */}
                         <li><Link to="/importantdates" className='text-[#357F70] font-medium'>IMPORTANT DATES</Link></li>
                         <li><Link to="/proceedings" className='text-[#357F70] font-medium'>PROCEEDINGS</Link></li>
                         <li><Link to="/Committees" className='text-[#357F70] font-medium'>COMMITTEES</Link></li>

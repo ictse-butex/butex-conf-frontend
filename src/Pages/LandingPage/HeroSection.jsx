@@ -21,7 +21,7 @@ const HeroSection = () => {
                     font-medium text-white bg-transparent border shadow-xl
                      border-[#3ba08c] rounded-full active:text-[#53532c] hover:bg-[#abb33c] hover:text-white-400 
                     focus:outline-none text-sm sm:text-base md:text-base lg:text-base "
-                                href="#">
+                                href="/registration">
                                 Register Now
                             </a>
                         {/* </div> */}
