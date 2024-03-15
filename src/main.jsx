@@ -18,6 +18,9 @@ import Proceedings from './Pages/NavbarPages/Proceedings';
 import Home from './Pages/NavbarPages/Home';
 import Speakers from './Pages/NavbarPages/Speakers';
 import ImportantDates from './Pages/NavbarPages/ImportantDates';
+import Failed from './Pages/StatusPages/Failed'
+import Success from './Pages/StatusPages/Success'
+
 
 
 const router = createBrowserRouter([
@@ -47,6 +50,14 @@ const router = createBrowserRouter([
       {
         path: '/registration',
         element : <Registration />,
+      },
+      {
+        path: '/registration/success',
+        element: <Success/>
+      },
+      {
+        path: '/registration/failed',
+        element: <Success/>
       }
       ,
       {
