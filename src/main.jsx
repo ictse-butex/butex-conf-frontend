@@ -18,16 +18,25 @@ import Proceedings from './Pages/NavbarPages/Proceedings';
 import Home from './Pages/NavbarPages/Home';
 import Speakers from './Pages/NavbarPages/Speakers';
 import ImportantDates from './Pages/NavbarPages/ImportantDates';
+import Failed from './Pages/StatusPages/Failed'
+import Status from './Pages/StatusPages/Status'
+import Error from './Pages/Error'
+
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <Error/>,
     children: [
       {
         path: '/',
         element : <Sidebar />,
+      },
+      {
+        path: '/status/:status',
+        element: <Status/>,
       },
       {
         path: '/callforpapers',
@@ -47,8 +56,7 @@ const router = createBrowserRouter([
       {
         path: '/registration',
         element : <Registration />,
-      }
-      ,
+      },
       {
         path: '/proceedings',
         element : <Proceedings />,
@@ -67,14 +75,17 @@ const router = createBrowserRouter([
       {
         path: '/contactus',
         element : <ContactUs />,
-      }
-      ,
+      },
       {
         path: '/aboutconference',
         element : <AboutConference />,
-      }
+      },
     ]
   },
+  {
+    path: '/error',
+    element : <Error />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

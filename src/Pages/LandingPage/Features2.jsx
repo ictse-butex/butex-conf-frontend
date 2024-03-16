@@ -9,13 +9,14 @@ const Features2 = () => {
                     <p className="py-6">ICONN 2024 is a gathering of nanoscience <br /> researchers worldwide,
                         working together to research high-impact<br /> commercial products and services.</p>
                     <div className="navbar ">
-                        <a class="inline-block px-6 sm:px-6 md:px-6 lg:px-12 py-2 sm:py-3 md:py-3.5 lg:py-4 
+                        <button class="inline-block px-6 sm:px-6 md:px-6 lg:px-12 py-2 sm:py-3 md:py-3.5 lg:py-4 
                     font-medium text-white bg-[#357F70] border shadow-xl
                      border-[#357F70] rounded-full active:text-[#50bea8] hover:bg-transparent hover:text-[#357F70] 
                     focus:outline-none text-sm sm:text-base md:text-base lg:text-base "
-                            href="#">
+                        onClick={() => location.replace('/registration')}
+                        >
                             Register Now
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <div className="grid grid-cols-4 grid-rows-3 gap-0 h-full ml-10">
