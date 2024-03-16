@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 import '../style/form.css'
+import { redirect } from 'react-router-dom';
 
 const RegistrationForm = () => {
   
@@ -13,17 +15,26 @@ const RegistrationForm = () => {
   const [dietaryRestriction, setDietaryRestriction] = useState("")
   
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // console.log(formData);
-    console.log(
-        firstName,
-        lastName,
-        email,
-        registrationType,
-        hasDietaryRestriction,
-        dietaryRestriction
-    )
+
+    const payload = {
+        "first_name": firstName,
+        "last_name": lastName,
+        "email": email,
+        "registration_type": registrationType,
+        "organization_name": affiliation,
+        "has_dietary_restrictions": hasDietaryRestriction,
+        "dietary_restrictions": dietaryRestriction === '' ? 'none' : dietaryRestriction 
+    }
+    console.log(payload)
+    const baseUrl = process.env.API_URL
+
+    const resp = await axios.post(`${baseUrl}/register/get-session/`, payload)
+
+    window.location.replace(resp.data.redirect_url)
+
     // Add your form submission logic here
   };
 
@@ -138,7 +149,7 @@ const RegistrationForm = () => {
                     </div>
                 )}
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" onSubmit={handleSubmit}>Submit</button>
         </div>
     </form>
   );

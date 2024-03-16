@@ -17,13 +17,13 @@ const HeroSection = () => {
                     <div class="max-w-md mx-auto mt-5 sm:flex sm:justify-center md:mt-8">
 
                         {/* <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3"> */}
-                            <a class="inline-block px-6 sm:px-6 md:px-6 lg:px-12 py-2 sm:py-3 md:py-3.5 lg:py-4 
+                            <button class="inline-block px-6 sm:px-6 md:px-6 lg:px-12 py-2 sm:py-3 md:py-3.5 lg:py-4 
                     font-medium text-white bg-transparent border shadow-xl
                      border-[#3ba08c] rounded-full active:text-[#53532c] hover:bg-[#abb33c] hover:text-white-400 
                     focus:outline-none text-sm sm:text-base md:text-base lg:text-base "
-                                href="/registration">
+                    onClick={() => location.replace('/registration')}>
                                 Register Now
-                            </a>
+                            </button>
                         {/* </div> */}
                     </div>
                 </div>
