@@ -30,8 +30,7 @@ const Features = () => {
                                 </svg>
                             </div>
                             <h3 class="mt-12 text-xl font-bold text-gray-900">SPEAKERS</h3>
-                            <p class="mt-5 text-base text-gray-600">Seamlessly integrate with your existing tools and systems for a smooth
-                                workflow experience.</p>
+                            <p class="mt-5 text-base text-gray-600">Plenary and Keynote Speakers</p>
                         </div>
 
                         <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
@@ -77,9 +76,10 @@ const Features = () => {
                                     fill="#F5F5FC"></path>
                             </svg>
                         </div>
-                        <h3 class="mt-12 text-xl font-bold text-gray-900">PROGRAM</h3>
-                        <p class="mt-5 text-base text-gray-600">Ensure the safety of your data with top-notch security features. Your
-                            privacy is our priority.</p>
+                        <div >
+                            <h3 class="mt-12 text-xl font-bold text-gray-900">PROGRAM</h3>
+                            <p class="mt-5 text-base text-gray-600">Don't miss these important dates!</p>
+                        </div>
                     </div>
 
 
