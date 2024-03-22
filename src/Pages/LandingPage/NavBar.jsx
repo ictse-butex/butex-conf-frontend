@@ -12,16 +12,16 @@ const NavBar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className=" h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-green-100 rounded-box w-52">
-                        <li><Link className='text-[#357F70] font-medium' to="/">HOME</Link></li>
-                        <li><Link className='text-[#357F70] font-medium' to="/aboutconference">ABOUT CONFERENCE</Link></li>
-                        <li><Link className='text-[#357F70] font-medium'>CALL FOR PAPERS</Link></li>
-                        {/* <li><Link className='text-[#357F70] font-medium'>SPEAKERS</Link></li> */}
-                        <li><Link className='text-[#357F70] font-medium'>IMPORTANT DATES</Link></li>
-                        {/* <li><Link className='text-[#357F70] font-medium'>REGISTRATION</Link></li> */}
-                        <li><Link className='text-[#357F70] font-medium'>PROCEEDINGS</Link></li>
-                        <li><Link className='text-[#357F70] font-medium'>COMMITTEES</Link></li>
-                        <li><Link className='text-[#357F70] font-medium'>IMPORTANT LINKS</Link></li>
-                        <li><Link className='text-[#357F70] font-medium'>CONTACT US</Link></li>
+                        <li><Link to="/" className='text-[#357F70] font-medium'>HOME</Link></li>
+                        <li><Link to="/callforpapers" className='text-[#357F70] font-medium'>CALL FOR PAPERS</Link></li>
+                        {/* <li><Link to="/speakers" className='text-[#357F70] font-medium'>SPEAKERS</Link></li> */}
+                        {/* <li><Link to="/registration" className='text-[#357F70] font-medium'>REGISTRATION</Link></li> */}
+                        <li><Link to="/importantdates" className='text-[#357F70] font-medium'>IMPORTANT DATES</Link></li>
+                        <li><Link to="/proceedings" className='text-[#357F70] font-medium'>PROCEEDINGS</Link></li>
+                        <li><Link to="/Committees" className='text-[#357F70] font-medium'>COMMITTEES</Link></li>
+                        <li><Link to="/importantlinks" className='text-[#357F70] font-medium'>IMPORTANT LINKS</Link></li>
+                        <li><Link to="/contactus" className='text-[#357F70] font-medium'>CONTACT US</Link></li>
+                        <li><Link to="/aboutconference" className='text-[#357F70] font-medium'>ABOUT CONFERENCE</Link></li>
                         </ul>
                     </div>
                     <img src="https://i.ibb.co/QHK3w9C/Conf-Logo-2024-removebg-preview.png" className=" w-52" />
