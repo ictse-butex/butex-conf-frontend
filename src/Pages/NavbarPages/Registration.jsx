@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import RegistrationForm  from '../../components/RegistrationForm';
+import { ToastContainer, toast, Bounce} from 'react-toastify';    
+
 
 import '../../style/form.css'
 
@@ -25,24 +27,31 @@ const Registration = () => {
                             <div className="bg-gray-200 text-gray-700 dark:text-gray-700 p-4">Category</div>
                             <div className="bg-gray-200 text-gray-700 dark:text-gray-700 p-4">Early Bird (05/04/2024)</div>
                             <div className="bg-gray-200 text-gray-700 dark:text-gray-700 p-4">Late</div>
+                            
                             <div className=" text-gray-700 dark:text-gray-700 p-4">Local delegate</div>
                             <div className=" text-gray-700 dark:text-gray-700 p-4">BDT 1500</div>
                             <div className=" text-gray-700 dark:text-gray-700 p-4">BDT 2000</div>
+                            
                             <div className=" text-gray-700 dark:text-gray-700 p-4">Local student</div>
                             <div className=" text-gray-700 dark:text-gray-700 p-4">BDT 750</div>
                             <div className=" text-gray-700 dark:text-gray-700 p-4">BDT 1000</div>
+                            
                             <div className=" text-gray-700 dark:text-gray-700 p-4">International student</div>
                             <div className=" text-gray-700 dark:text-gray-700 p-4">USD 25</div>
                             <div className=" text-gray-700 dark:text-gray-700 p-4">USD 30</div>
+                            
                             <div className=" text-gray-700 dark:text-gray-700 p-4">SAARC/ASEAN delegate</div>
                             <div className=" text-gray-700 dark:text-gray-700 p-4">USD 80</div>
                             <div className=" text-gray-700 dark:text-gray-700 p-4">USD 100</div>
+                            
                             <div className=" text-gray-700 dark:text-gray-700 p-4">Others Foreign delegate</div>
                             <div className=" text-gray-700 dark:text-gray-700 p-4">USD 40</div>
                             <div className=" text-gray-700 dark:text-gray-700 p-4">USD 50</div>
+                            
                             <div className=" text-gray-700 dark:text-gray-700 p-4">Accompanying person</div>
                             <div className=" text-gray-700 dark:text-gray-700 p-4">BDT 800</div>
                             <div className=" text-gray-700 dark:text-gray-700 p-4">BDT 1000</div>
+                            
                         </div>
                     </div>
                     <button className="border px-4 py-2 my-1 rounded bg-[#357F70] text-white" onClick={() => setAccepted(!accepted)}>Contiune to registration</button>

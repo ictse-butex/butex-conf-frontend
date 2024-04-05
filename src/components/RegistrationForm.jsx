@@ -5,10 +5,11 @@ import ReactLoading from "react-loading";
 import { ToastContainer, toast, Bounce} from 'react-toastify';    
 
 import '../style/form.css'
-import { redirect } from 'react-router-dom';
 import Modal from './PaymentConfirmationModal'
 
 const RegistrationForm = () => {
+
+	const baseUrl = process.env.API_URL
   
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
@@ -19,8 +20,9 @@ const RegistrationForm = () => {
   const [dietaryRestriction, setDietaryRestriction] = useState("")
   const [paperID, setPaperID] = useState("")
   const [paperTitle, setPaperTitle] = useState("")
-  const [loading, setLoading] = useState(false)
-
+  
+	
+	const [loading, setLoading] = useState(false)
   const [showModal, setShowModal] = useState(false)
   const [modalData, setModalData] = useState(null)
 
@@ -30,7 +32,20 @@ const RegistrationForm = () => {
     setLoading(false)
   }
 
-  const handleProceed = async (e) => {
+
+	const resetData = () => {
+		setFirstName('')
+		setLastName('')
+		setEmail('')
+		setRegistrationType('')
+		setAffiliation('')
+		setHasDietaryRestriction(false)
+		setDietaryRestriction('')
+		setPaperID('')
+		setPaperTitle('')
+	}
+
+  const handleSubmit = async (e) => {
     e.preventDefault();   
 
     let payload = {
@@ -41,8 +56,6 @@ const RegistrationForm = () => {
         "organization_name": affiliation,
         "has_dietary_restrictions": hasDietaryRestriction,
         "is_presenter": registrationType === "PRESENTER",
-        // "paper_id": paperID === '' ? null : paperID,
-        // "paper_title": paperTitle === '' ? null : paperTitle 
     }
     
     if(payload['has_dietary_restrictions']){
@@ -55,15 +68,18 @@ const RegistrationForm = () => {
     }
 
 
-    const baseUrl = process.env.API_URL
-    
-    console.log(payload)
 
     setLoading(true)
-    console.log('before call')
     
     try{
         const resp = await (await axios.post(`${baseUrl}/register/get-session/`, payload))
+        if (resp?.data?.waiver){
+					setLoading(false)
+					resetData()
+					toast.success('Registration successful! An email containing details about the conference has been sent to your inbox.')
+          return
+        }
+
         setModalData(resp.data)
     }catch (error){
         console.log('error config ', error.message)
@@ -82,7 +98,6 @@ const RegistrationForm = () => {
         setLoading(false)
         return 
     }
-    console.log('after call')
     
     setLoading(false)
     setShowModal(true)
@@ -110,7 +125,7 @@ const RegistrationForm = () => {
         <Modal showModal={showModal} setShowModal={setShowModal} data={modalData}/>
         
 
-        <form className='w-full ' onSubmit={handleProceed}>
+        <form id='registration-form' className='w-full ' onSubmit={handleSubmit}>
             <div className='text-center p-5 pt-20 pb-44'>
                 {/* first name */}
                 <div className="w-full md:w-full px-3 mb-6 md:mb-0 flex p-5">
@@ -252,7 +267,9 @@ const RegistrationForm = () => {
                         </div>
                     )}
                 </div>
-                <button type="submit" onSubmit={handleProceed}>Proceed</button>
+                <button type="submit" onSubmit={handleSubmit}>{
+                    registrationType==='PRESENTER' ? 'Register' : 'Proceed'
+                }</button>
             </div>
         </form>
         
