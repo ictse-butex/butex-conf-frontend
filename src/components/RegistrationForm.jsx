@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import ReactLoading from "react-loading";
-    
+
+import { ToastContainer, toast, Bounce} from 'react-toastify';    
 
 import '../style/form.css'
 import { redirect } from 'react-router-dom';
+import Modal from './PaymentConfirmationModal'
 
 const RegistrationForm = () => {
   
@@ -15,34 +17,77 @@ const RegistrationForm = () => {
   const [affiliation, setAffiliation] = useState("")
   const [hasDietaryRestriction, setHasDietaryRestriction] = useState(false)
   const [dietaryRestriction, setDietaryRestriction] = useState("")
+  const [paperID, setPaperID] = useState("")
+  const [paperTitle, setPaperTitle] = useState("")
   const [loading, setLoading] = useState(false)
+
+  const [showModal, setShowModal] = useState(false)
+  const [modalData, setModalData] = useState(null)
 
   const handleClose = (e) => {
     e.preventDefault();
-    location.replace('/registration')
+    // location.replace('/registration')
     setLoading(false)
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // console.log(formData);
+  const handleProceed = async (e) => {
+    e.preventDefault();   
 
-    const payload = {
+    let payload = {
         "first_name": firstName,
         "last_name": lastName,
         "email": email,
         "registration_type": registrationType,
         "organization_name": affiliation,
         "has_dietary_restrictions": hasDietaryRestriction,
-        "dietary_restrictions": dietaryRestriction === '' ? 'none' : dietaryRestriction 
+        "is_presenter": registrationType === "PRESENTER",
+        // "paper_id": paperID === '' ? null : paperID,
+        // "paper_title": paperTitle === '' ? null : paperTitle 
     }
+    
+    if(payload['has_dietary_restrictions']){
+        payload["dietary_restrictions"] = dietaryRestriction
+    }
+
+    if (payload['is_presenter']){
+        payload['paper_id'] = paperID
+        payload['paper_title'] = paperTitle
+    }
+
+
     const baseUrl = process.env.API_URL
     
-    setLoading(true)
-    const resp = await axios.post(`${baseUrl}/register/get-session/`, payload)
-    setLoading(false)
+    console.log(payload)
 
-    window.location.replace(resp.data.redirect_url)
+    setLoading(true)
+    console.log('before call')
+    
+    try{
+        const resp = await (await axios.post(`${baseUrl}/register/get-session/`, payload))
+        setModalData(resp.data)
+    }catch (error){
+        console.log('error config ', error.message)
+        console.log("error res ", error?.response?.data)
+        toast.error(JSON.stringify(error?.response?.data) || "something went wrong", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    transition: Bounce,
+                    });
+        setLoading(false)
+        return 
+    }
+    console.log('after call')
+    
+    setLoading(false)
+    setShowModal(true)
+
+    // window.location.replace(resp.data.redirect_url)
 
     // Add your form submission logic here
   };
@@ -55,12 +100,17 @@ const RegistrationForm = () => {
                 <button className="close-button" onClick={handleClose}>&times;</button>
                 <div className='loading-container'>
                     <ReactLoading type='spin' color='#357F70'/> 
-                <p className='text-white'>Redirecting to payment Please wait</p>
+                <p className='text-white'>Please wait</p>
                 </div>
             </div>
 
         }
-        <form className='w-full ' onSubmit={handleSubmit}>
+
+        <ToastContainer />
+        <Modal showModal={showModal} setShowModal={setShowModal} data={modalData}/>
+        
+
+        <form className='w-full ' onSubmit={handleProceed}>
             <div className='text-center p-5 pt-20 pb-44'>
                 {/* first name */}
                 <div className="w-full md:w-full px-3 mb-6 md:mb-0 flex p-5">
@@ -126,8 +176,40 @@ const RegistrationForm = () => {
                         <option value="SAARC_DELEGATE">SAARC Delegate</option>
                         <option value="OTHER_FOREIGN_DELEGATE">Other foreign delegate</option>
                         <option value="ACCOMPANYING_PERSON">Accompanying person</option>
+                        <option value="PRESENTER">Presenter</option>
                     </select>
                 </div>
+
+                {/* paper_id */}
+                {registrationType === "PRESENTER" && 
+                    <div className='w-full md:w-full px-3 mb-6 md:mb-0 flex p-5'>
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 w-1/6 pt-3" htmlFor="affiliation">Paper ID</label>
+                        <input
+                        type="text"
+                        id="paper_id"
+                        name="paper_id"
+                        className='appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white'
+                        value={paperID}
+                        onChange={(e) => setPaperID(e.target.value)}
+                        required
+                        />
+                    </div>
+                }
+
+                {registrationType === "PRESENTER" && 
+                    <div className='w-full md:w-full px-3 mb-6 md:mb-0 flex p-5'>
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 w-1/6 pt-3" htmlFor="affiliation">Paper Title</label>
+                        <input
+                        type="text"
+                        id="paper_title"
+                        name="paper_title"
+                        className='appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white'
+                        value={paperTitle}
+                        onChange={(e) => setPaperTitle(e.target.value)}
+                        required
+                        />
+                    </div>
+                }
 
 
                 {/* affiliate */}
@@ -170,7 +252,7 @@ const RegistrationForm = () => {
                         </div>
                     )}
                 </div>
-                <button type="submit" onSubmit={handleSubmit}>Submit</button>
+                <button type="submit" onSubmit={handleProceed}>Proceed</button>
             </div>
         </form>
         

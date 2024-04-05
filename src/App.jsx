@@ -1,5 +1,7 @@
 
 import './App.css'; // Import your CSS file for styling.
+import 'react-toastify/dist/ReactToastify.css';
+
 import { Outlet } from 'react-router-dom';
 import NavBar from './Pages/LandingPage/NavBar';
 import Footer from './Pages/LandingPage/Footer';
