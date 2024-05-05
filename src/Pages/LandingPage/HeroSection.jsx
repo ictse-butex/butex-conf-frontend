@@ -12,7 +12,7 @@ const HeroSection = () => {
                     </h1>
                     <h2 className="mt-2 text-white">With special focus on Textile Processing, Sustainability and Circularity</h2>
                     <p class="max-w-md mx-auto mt-3 text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                    23-24 May 2024, BUTEX, Dhaka, Bangladesh
+                    23 May 2024, BUTEX, Dhaka, Bangladesh
                     </p>
                     <div class="max-w-md mx-auto mt-5 sm:flex sm:justify-center md:mt-8">
 

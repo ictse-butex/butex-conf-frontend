@@ -96,7 +96,7 @@ const ImportantDates = () => {
                     <div class="flex md:contents flex-row-reverse">
                         <div
                             class="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
-                            <h3 class="text-lg font-semibold lg:text-xl">23-24 May 2024</h3>
+                            <h3 class="text-lg font-semibold lg:text-xl">23 May 2024</h3>
                             <p class="mt-2 leading-6">Conference Date</p>
                         </div>
                         <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">

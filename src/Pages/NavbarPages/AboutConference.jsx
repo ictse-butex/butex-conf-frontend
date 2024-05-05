@@ -6,7 +6,7 @@ const AboutConference = () => {
             <div >
                 <div className='mx-auto mb-6 max-w-fit  text-center text-gray-500 dark:text-gray-400'>The Faculty of Textile Chemical Engineering (FTCE) of Bangladesh University of Textiles (BUTEX) is
                     going to organize the <span className='font-bold'>“2nd International Conference on Textile Science and Engineering (ICTSE-2024)”</span>
-                    which will be held on 23-24 May 2024 in BUTEX, Dhaka, Bangladesh. The main focus of the conference is to provide a platform for scholars, researchers, and professionals around the world for interdisciplinary discussions on the latest advancements,
+                    which will be held on 23 May 2024 in BUTEX, Dhaka, Bangladesh. The main focus of the conference is to provide a platform for scholars, researchers, and professionals around the world for interdisciplinary discussions on the latest advancements,
                     challenges, and solutions covering a broad spectrum of Textile Science and Technology.</div>
 
 
