@@ -12,7 +12,6 @@ const ImportantDates = () => {
                             class="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
                             <h3 class="text-lg font-semibold lg:text-xl">10 February 2024</h3>
                             <p class="mt-2 leading-6">Extended Abstract submission.</p>
-                            <span class="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">Date 1</span>
                         </div>
                         <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
                             <div class="flex items-center justify-center w-6 h-full">
@@ -33,7 +32,6 @@ const ImportantDates = () => {
                         <div class="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-6 col-end-10 mr-auto">
                             <h3 class="text-lg font-semibold lg:text-xl">16 February 2024</h3>
                             <p class="mt-2 leading-6">Acceptance of notification</p>
-                            <span class="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">Date 2</span>
                         </div>
                     </div>
 
@@ -42,7 +40,6 @@ const ImportantDates = () => {
                             class="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
                             <h3 class="text-lg font-semibold lg:text-xl">15 March 2024</h3>
                             <p class="mt-2 leading-6">Full Paper submission.</p>
-                            <span class="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">Date 3</span>
                         </div>
                         <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
                             <div class="flex items-center justify-center w-6 h-full">
@@ -63,7 +60,6 @@ const ImportantDates = () => {
                         <div class="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-6 col-end-10 mr-auto">
                             <h3 class="text-lg font-semibold lg:text-xl">30 March 2024</h3>
                             <p class="mt-2 leading-6">Acceptance of notification</p>
-                            <span class="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">Date 4</span>
                         </div>
                     </div>
 
@@ -72,7 +68,6 @@ const ImportantDates = () => {
                             class="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
                             <h3 class="text-lg font-semibold lg:text-xl">5 April 2024</h3>
                             <p class="mt-2 leading-6">Early bird registration</p>
-                            <span class="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">Date 3</span>
                         </div>
                         <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
                             <div class="flex items-center justify-center w-6 h-full">
@@ -92,9 +87,8 @@ const ImportantDates = () => {
                             <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-yellow-400 rounded-full top-1/2"></div>
                         </div>
                         <div class="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-6 col-end-10 mr-auto">
-                            <h3 class="text-lg font-semibold lg:text-xl">30 April 2024</h3>
+                            <h3 class="text-lg font-semibold lg:text-xl">16 May 2024</h3>
                             <p class="mt-2 leading-6">Last date of conference registration</p>
-                            <span class="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">Date 4</span>
                         </div>
                     </div>
 
@@ -104,7 +98,6 @@ const ImportantDates = () => {
                             class="relative p-4 my-6 text-gray-800 bg-white rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
                             <h3 class="text-lg font-semibold lg:text-xl">23-24 May 2024</h3>
                             <p class="mt-2 leading-6">Conference Date</p>
-                            <span class="absolute text-sm text-indigo-100/75 -top-5 left-2 whitespace-nowrap">Date 3</span>
                         </div>
                         <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
                             <div class="flex items-center justify-center w-6 h-full">

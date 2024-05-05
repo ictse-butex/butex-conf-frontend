@@ -1,6 +1,9 @@
+import Countdown from 'react-countdown';
 import { Link, NavLink } from 'react-router-dom';
+import RegistrationCountdown from '../../components/RegistrationCountdown';
 
 const NavBar = () => {
+    const registrationEndDate = new Date(2024, 4, 16) 
     return (
         <div className=" bg-[#D7E8E1]">
 
@@ -24,7 +27,14 @@ const NavBar = () => {
                         <li><Link to="/aboutconference" className='text-[#357F70] font-medium'>ABOUT CONFERENCE</Link></li>
                         </ul>
                     </div>
-                    <img src="https://i.ibb.co/QHK3w9C/Conf-Logo-2024-removebg-preview.png" className=" w-52" />
+                    <img src="https://i.ibb.co/QHK3w9C/Conf-Logo-2024-removebg-preview.png" className=" w-52" />                    
+                </div>
+
+                <div className='mt-10 pt-5 text-center' style={{
+                    whiteSpace: 'nowrap',
+                    width: '300px', 
+                }}>
+                    <RegistrationCountdown/>
                 </div>
 
                 <div className="navbar justify-center mt-5">

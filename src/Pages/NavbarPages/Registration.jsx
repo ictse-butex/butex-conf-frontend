@@ -17,6 +17,7 @@ const Registration = () => {
         <div className='bg-white'>
             <div className={`bg-white ${accepted ? 'hide' : 'show'}` }>
                 <p className='text-center mb-3 pt-10 pb-5 text-gray-500 dark:text-gray-400'>Registration for the 2nd International Conference on Textile Science and Engineering will be opened on <b>5 April 2024.</b></p>
+                <p className='text-center mb-3 pb-5 text-gray-500 dark:text-gray-400'>Last date of registration is <b>16 May 2024.</b></p>
 
                 {/* <p className='text-center mb-3 text-gray-500 dark:text-gray-400'>All registration information including pricing and inclusions is outlined below:</p> */}
                 <div className='text-center mt-10 mb-10  '>
