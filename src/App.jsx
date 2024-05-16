@@ -13,7 +13,7 @@ const App = () => {
   return (
     <>
     <NavBar/>
-        <Outlet/>
+    <Outlet/>
     {/* <Footer/> */}
     </>
   );

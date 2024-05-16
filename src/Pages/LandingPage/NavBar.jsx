@@ -3,7 +3,6 @@ import { Link, NavLink } from 'react-router-dom';
 import RegistrationCountdown from '../../components/RegistrationCountdown';
 
 const NavBar = () => {
-    const registrationEndDate = new Date(2024, 4, 16) 
     return (
         <div className=" bg-[#D7E8E1]">
 
@@ -38,8 +37,9 @@ const NavBar = () => {
                     onClick={() => location.replace('/registration')}>
                         Register Now<br/>
                     </button>
-                    <sub className=' m-2'>
-                        <RegistrationCountdown/>
+                    <sub className=' m-2 flex-col'>
+                        <RegistrationCountdown/><br/>
+                        <span className='pt-5'>remaining</span>
                     </sub>
 
                 </div>
