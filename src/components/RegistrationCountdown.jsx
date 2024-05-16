@@ -3,12 +3,18 @@ import Countdown from 'react-countdown';
 // Custom renderer with additional styling
 const countdownRenderer = ({ days, hours, minutes, seconds }) => {
   return (
-    <span className='text-[#357F70] '>
-      {days} DAYS{' '}
-      <span >{hours} HOURS</span>{' '}
-      {minutes} MINS{' '}
-      <span >{seconds} SECS</span>
-    </span>
+
+    <div className="grid grid-cols-4 grid-rows-2 gap-4 text-center">
+      <div >day</div>
+      <div >hour</div>
+      <div >min</div>
+      <div >sec</div>
+      <div className="row-start-2">{days}</div>
+      <div className="row-start-2">{hours}</div>
+      <div className="row-start-2">{minutes}</div>
+      <div className="row-start-2">{seconds}</div>
+    </div>
+
   );
 };
 
@@ -17,17 +23,7 @@ const registrationEndDate = new Date('2024-05-20T00:00:00');
 
 // Component displaying the countdown with styles
 const RegistrationCountdown = () => (
-  <div
-    style={{
-      backgroundColor: '',
-    //   padding: '10px',
-    //   textAlign: 'center',
-    //   borderRadius: '5px',
-    //   color:'white'
-    }}
-  >
-    REGISTRATION ENDS IN <br /><b> <Countdown date={registrationEndDate} renderer={countdownRenderer} /></b>
-  </div>
+   <Countdown date={registrationEndDate} renderer={countdownRenderer} />
 );
 
 export default RegistrationCountdown;

@@ -30,28 +30,17 @@ const NavBar = () => {
                     <img src="https://www.butex.edu.bd/wp-content/uploads/2024/01/ConfLogo2024.png" className=" w-52" />                    
                 </div>
 
-                <div className='mt-10 pt-5 text-center' style={{
-                    whiteSpace: 'nowrap',
-                    width: '300px', 
-                }}>
-                    <RegistrationCountdown/>
-                </div>
-
-                <div className="navbar justify-center mt-5">
+                <div className="navbar flex-col justify-center mt-5 ">
                     <button class="inline-block px-6 sm:px-6 md:px-6 lg:px-12 py-2 sm:py-3 md:py-3.5 lg:py-4 
                     font-medium text-white bg-[#357F70] border shadow-xl
                      border-[#357F70] rounded-full active:text-[#50bea8] hover:bg-transparent hover:text-[#357F70] 
                     focus:outline-none text-sm sm:text-base md:text-base lg:text-base "
                     onClick={() => location.replace('/registration')}>
-                        Register Now
+                        Register Now<br/>
                     </button>
-                    {/* <div
-                        class="text-4xl cursor-pointer relative before:absolute
-                         before:bg-[#82C348] before:bottom-0 before:left-0 before:h-full 
-                         before:w-full before:origin-bottom before:scale-y-[0.35] hover:before:scale-y-100 
-                         before:transition-transform before:ease-in-out before:duration-500">
-                        <span class="relative">Register Now</span>
-                    </div> */}
+                    <sub className=' m-2'>
+                        <RegistrationCountdown/>
+                    </sub>
 
                 </div>
             </div>
