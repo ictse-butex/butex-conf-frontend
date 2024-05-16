@@ -23,16 +23,16 @@ const Features2 = () => {
                 </div>
                 <div className="grid grid-cols-2 grid-rows-2 gap-2 h-full ml-10">
                     <div className="mr-5 mb-5 grid-item col-start-1 col-end-1 row-start-1 row-end-1" title='Prof. Dr. Shah Alimuzzaman, Vice Chancellor, BUTEX'>
-                        <img src="src/asset/speakersImage/speaker1.jpeg" className="w-32 h-32  mx-auto rounded-full shadow-2xl" alt="Prof. Dr. Shah Alimuzzaman, Vice Chancellor, BUTEX" />
+                        <img src="assets/speaker1.jpeg" className="w-32 h-32  mx-auto rounded-full shadow-2xl" alt="Prof. Dr. Shah Alimuzzaman, Vice Chancellor, BUTEX" />
                     </div>
                     <div className="mr-5 mb-5 grid-item col-start-2 col-end-2 row-start-1 row-end-2" title='Dr. Ummul Khair Fatema, Dean FTCE, BUTEX'>
-                        <img src="src/asset/speakersImage/speaker2.jpeg" className="w-32 h-32 mx-auto rounded-full  shadow-2xl" alt="Dr. Ummul Khair Fatema, Dean FTCE, BUTEX" />
+                        <img src="assets/speaker2.jpeg" className="w-32 h-32 mx-auto rounded-full  shadow-2xl" alt="Dr. Ummul Khair Fatema, Dean FTCE, BUTEX" />
                     </div>
                     <div className="mr-5 mb-5 grid-item col-start-1 col-end-1 row-start-2 row-end-3" title='Prof. Dr. Michael Rauch, University of applied science Hof, department Muenchberg, Germany'>
-                        <img src="src/asset/speakersImage/speaker3.png" className="w-32 h-32  mx-auto  rounded-full shadow-2xl" alt="Image 1" />
+                        <img src="assets/speaker3.png" className="w-32 h-32  mx-auto  rounded-full shadow-2xl" alt="Image 1" />
                     </div>
                     <div className="mr-5 mb-5 grid-item col-start-2 col-end-2 row-start-2 row-end-3" title='Mohammad Abbas Uddin, DAUS, DCE BUTEX'>
-                        <img src="src/asset/speakersImage/speaker4.jpeg" className="w-32 h-32  mx-auto  rounded-full shadow-2xl" alt="Image 1" />
+                        <img src="assets/speaker4.jpeg" className="w-32 h-32  mx-auto  rounded-full shadow-2xl" alt="Image 1" />
                     </div>
                     {/* <div className="grid-item col-start-1 col-end-2 row-start-2 row-end-3"><img src="https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg" className="w-32 h-32  mx-auto rounded-full shadow-2xl" alt="Image 1" /></div> */}
                     {/* <div className="grid-item col-start-1 col-end-3 row-start-3 row-end-4"><img src="https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg" className="w-32 h-32  mx-auto rounded-full shadow-2xl" alt="Image 1" /></div>

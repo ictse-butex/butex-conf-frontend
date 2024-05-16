@@ -13,7 +13,7 @@ const countdownRenderer = ({ days, hours, minutes, seconds }) => {
 };
 
 // Registration end date
-const registrationEndDate = new Date('2024-05-16T00:00:00');
+const registrationEndDate = new Date('2024-05-20T00:00:00');
 
 // Component displaying the countdown with styles
 const RegistrationCountdown = () => (

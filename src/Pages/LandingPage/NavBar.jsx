@@ -27,7 +27,7 @@ const NavBar = () => {
                         <li><Link to="/aboutconference" className='text-[#357F70] font-medium'>ABOUT CONFERENCE</Link></li>
                         </ul>
                     </div>
-                    <img src="https://i.ibb.co/QHK3w9C/Conf-Logo-2024-removebg-preview.png" className=" w-52" />                    
+                    <img src="https://www.butex.edu.bd/wp-content/uploads/2024/01/ConfLogo2024.png" className=" w-52" />                    
                 </div>
 
                 <div className='mt-10 pt-5 text-center' style={{
