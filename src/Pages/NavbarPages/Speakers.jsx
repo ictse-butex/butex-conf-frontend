@@ -9,7 +9,7 @@ const Speakers = () => {
     <div className="carousel-wrapper w-4/5 max-h-fit pt-5 m-auto"  style={{
     }}>
         <Carousel autoPlay={true} className='h-1/2'>
-            {[...Array(17)].map((_, index) => (
+            {[...Array(34)].map((_, index) => (
             <div key={index} className='h-1/2'>
                 <img src={`https://ictsebutex.com/assets/speakers/${index}.jpg`} />
             </div>
