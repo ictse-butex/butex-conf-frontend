@@ -1,0 +1,81 @@
+/* CommitteeGrid.css */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .committee-section {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .committee-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .committee-members {
+    list-style: none;
+    padding: 0;
+    max-height: 140px; /* Adjust this value as needed */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .committee-members.expanded {
+    max-height: none;
+  }
+  
+  .see-more-button {
+    background: #357F70;
+    color: #D7E8E1;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+  }
+  
+  .see-more-button:hover {
+    background: #D7E8E1;
+    color: #357F70;
+    border: solid 1px #357F70;
+  }
+  
+  /* .committee-member.ul li:nth-of-type(odd) a {
+    
+  }
+   */
+
+
+   .committee-member{
+    margin: 5px;
+    padding: 10px;
+    font-size: small;
+   }
+
+  .committee-member:nth-of-type(odd){
+    background-color: #D7E8E1;
+  }
+
+
+  @media (max-width: 768px) {
+    .committee-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
