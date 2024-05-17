@@ -16,7 +16,7 @@ const NavBar = () => {
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-green-100 rounded-box w-52">
                         <li><Link to="/" className='text-[#357F70] font-medium'>HOME</Link></li>
                         <li><Link to="/callforpapers" className='text-[#357F70] font-medium'>CALL FOR PAPERS</Link></li>
-                        {/* <li><Link to="/speakers" className='text-[#357F70] font-medium'>SPEAKERS</Link></li> */}
+                        <li><Link to="/speakers" className='text-[#357F70] font-medium'>SPEAKERS</Link></li>
                         {/* <li><Link to="/registration" className='text-[#357F70] font-medium'>REGISTRATION</Link></li> */}
                         <li><Link to="/importantdates" className='text-[#357F70] font-medium'>IMPORTANT DATES</Link></li>
                         <li><Link to="/proceedings" className='text-[#357F70] font-medium'>PROCEEDINGS</Link></li>
@@ -50,7 +50,7 @@ const NavBar = () => {
                     <ul className="menu menu-horizontal px-1">
                         <li><Link to="/" className='text-[#357F70] font-medium'>HOME</Link></li>
                         <li><Link to="/callforpapers" className='text-[#357F70] font-medium'>CALL FOR PAPERS</Link></li>
-                        {/* <li><Link to="/speakers" className='text-[#357F70] font-medium'>SPEAKERS</Link></li> */}
+                        <li><Link to="/speakers" className='text-[#357F70] font-medium'>SPEAKERS</Link></li>
                         {/* <li><Link to="/registration" className='text-[#357F70] font-medium'>REGISTRATION</Link></li> */}
                         <li><Link to="/importantdates" className='text-[#357F70] font-medium'>IMPORTANT DATES</Link></li>
                         <li><Link to="/proceedings" className='text-[#357F70] font-medium'>PROCEEDINGS</Link></li>
