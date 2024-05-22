@@ -14,7 +14,6 @@ import '../../style/speaker.css';
       const fileNumber = String(i).padStart(3, '0');
       pdfDirectory.push(`assets/speakers-bio/ICTSE24-${fileNumber}.pdf`);
     }
-    console.log(pdfDirectory)
     return pdfDirectory;
   };
   

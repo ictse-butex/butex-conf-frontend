@@ -134,3 +134,6 @@
     background: rgba(0, 0, 0, 0.75);
   }
   
+  .pdf-page {
+    margin-bottom: 20px; /* Adjust the value to set the gap size */
+  }

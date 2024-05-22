@@ -7,7 +7,7 @@ const Features = () => {
                 <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div
                         class="grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24">
-                        <div class="md:p-8 lg:p-14 flex flex-col justify-center items-center"  onClick={() => location.replace('/registration')}>
+                        <div class="md:p-8 lg:p-14 flex flex-col justify-center items-center cursor-pointer"  onClick={() => location.replace('/registration')}>
                             <div
                                 class="mx-auto flex h-24  w-24 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
                                 <svg viewBox="0 0 33 46" fill="none" xmlns="http://www.w3.org/2000/svg" class=" h-10  w-10 text-white">
@@ -20,7 +20,7 @@ const Features = () => {
                             <p class="mt-5 text-base text-gray-600">Register now to get access to the conference</p>
                         </div>
 
-                        <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
+                        <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center cursor-pointer" onClick={() => location.replace('/speakers')}>
                             <div
                                 class="mx-auto flex h-24 w-24 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-sky-500 shadow-sky-500/40">
                                 <svg viewBox="0 0 55 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white">
@@ -33,7 +33,7 @@ const Features = () => {
                             <p class="mt-5 text-base text-gray-600">Plenary and Keynote Speakers</p>
                         </div>
 
-                        <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center" onClick={() => location.replace('/importantdates')}>
+                        <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center cursor-pointer" onClick={() => location.replace('/importantdates')}>
 
 
                             <div class="mx-auto flex h-24 w-24 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
@@ -77,7 +77,7 @@ const Features = () => {
                             </svg>
                         </div>
                         <div>
-                            <h3 class="mt-12 text-xl font-bold text-gray-900">PROGRAM</h3>
+                            <h3 class="mt-12 text-xl font-bold text-gray-900">PROGRAM SCHEDULE</h3>
                             <p class="mt-5 text-base text-gray-600">Don't miss these important dates!</p>
                         </div>
                     </div>

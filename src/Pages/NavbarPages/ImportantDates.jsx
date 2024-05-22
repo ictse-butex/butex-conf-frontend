@@ -1,37 +1,39 @@
 import React, {useState} from 'react';
 import HTMLFlipBook from "react-pageflip";
 import { pdfjs, Document, Page as ReactPdfPage } from "react-pdf";
-import "../../style/pdf-style.css"
+import "../../style/pdf-style.css";
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
-import PresenrationSchedule from "../../asset/PresentationSchedule.pdf"
+import PresentationSchedule from "../../asset/PresentationSchedule.pdf";
 
 const Page = React.forwardRef(({ pageNumber }, ref) => {
     return (
-      <div ref={ref}>
-        <ReactPdfPage pageNumber={pageNumber} width={window.innerWidth} height={window.innerHeight}/>
-      </div>
+        <div ref={ref} className="pdf-page">
+            <ReactPdfPage pageNumber={pageNumber} width={window.innerWidth * 0.975} />
+        </div>
     );
-  });
+});
 
 const ImportantDates = () => {
     pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
+    const [numPages, setNumPages] = useState(null);
 
+    const onDocumentLoadSuccess = ({ numPages }) => {
+        console.log(numPages);
+        setNumPages(numPages);
+    };
 
-  return (
-    <div className='overflow-auto'>
-        <Document file={PresenrationSchedule}>
-        <HTMLFlipBook width={window.innerWidth} height={window.innerHeight}>
-            <Page pageNumber={1} />
-            <Page pageNumber={2} />
-            <Page pageNumber={3} />
-            <Page pageNumber={4} />
-        </HTMLFlipBook>
-        </Document>    
-    </div>
-  );
+    return (
+        <div className="overflow-auto page-container">
+            <Document file={PresentationSchedule} onLoadSuccess={onDocumentLoadSuccess}>
+                {[...Array(numPages).keys()].map(pageNumber => (
+                    <Page key={pageNumber + 1} pageNumber={pageNumber + 1} />
+                ))}
+            </Document>
+        </div>
+    );
 };
 
 export default ImportantDates;
