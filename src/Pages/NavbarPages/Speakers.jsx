@@ -13,14 +13,14 @@ import '../../style/speaker.css';
     for (let i = start; i <= end; i++) {
       // Pad the number with leading zeros to ensure it is three digits
       const fileNumber = String(i).padStart(3, '0');
-      pdfDirectory.push(`assets/speakers-bio/${fileNumber}.pdf`);
+      pdfDirectory.push(`assets/speakers-bio/ICTSE24-${fileNumber}.pdf`);
     }
-  
+    console.log(pdfDirectory)
     return pdfDirectory;
   };
   
 
-  const pdfDirectory = generatePdfDirectory(1, 44);
+  const pdfDirectory = generatePdfDirectory(0, 43);
   
   // const pdfDirectory = [
   //   'assets/speakers-bio/001.pdf',
