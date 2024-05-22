@@ -3,7 +3,7 @@ import { pdfjs, Document, Page } from 'react-pdf';
 import Modal from 'react-modal';
 import '../../style/speaker.css';
 
-// import '../../asset/speakers.pdf'
+// import speakers from '../../asset/speakers.pdf'
 
  const Speaker = () => {
   const generatePdfDirectory = (start, end) => {
@@ -51,7 +51,7 @@ import '../../style/speaker.css';
         {pdfDirectory.map((pdf, index) => (
           <div key={index} className="pdf-item" onClick={() => openModal(pdf)}>
             <Document file={pdf}>
-              <Page pageNumber={1} width={150} />
+              <Page pageNumber={1} width={window.innerWidth} />
             </Document>
           </div>
         ))}
