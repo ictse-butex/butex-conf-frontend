@@ -93,7 +93,8 @@
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 16px;
     padding: 20px;
-    height: 250px;
+    max-width: calc(5 * 150px + 5 * 16px); /* Ensures a max of 5 columns */
+    margin: 0 auto;
   }
   
   .pdf-item {
@@ -102,6 +103,8 @@
     border-radius: 4px;
     overflow: hidden;
     transition: transform 0.2s ease;
+    width: 150px; /* Fixed width */
+    height: 200px; /* Fixed height */
   }
   
   .pdf-item:hover {
@@ -118,7 +121,6 @@
     border-radius: 8px;
     max-width: 90%;
     max-height: 90%;
-    height: 700%;
     overflow: auto;
   }
   
