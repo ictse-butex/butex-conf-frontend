@@ -33,7 +33,7 @@ const Features = () => {
                             <p class="mt-5 text-base text-gray-600">Plenary and Keynote Speakers</p>
                         </div>
 
-                        <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
+                        <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center" onClick={() => location.replace('/importantdates')}>
 
 
                             <div class="mx-auto flex h-24 w-24 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
@@ -76,7 +76,7 @@ const Features = () => {
                                     fill="#F5F5FC"></path>
                             </svg>
                         </div>
-                        <div >
+                        <div>
                             <h3 class="mt-12 text-xl font-bold text-gray-900">PROGRAM</h3>
                             <p class="mt-5 text-base text-gray-600">Don't miss these important dates!</p>
                         </div>

@@ -18,7 +18,7 @@ const NavBar = () => {
                         <li><Link to="/callforpapers" className='text-[#357F70] font-medium'>CALL FOR PAPERS</Link></li>
                         <li><Link to="/speakers" className='text-[#357F70] font-medium'>SPEAKERS</Link></li>
                         {/* <li><Link to="/registration" className='text-[#357F70] font-medium'>REGISTRATION</Link></li> */}
-                        <li><Link to="/importantdates" className='text-[#357F70] font-medium'>IMPORTANT DATES</Link></li>
+                        <li><Link to="/importantdates" className='text-[#357F70] font-medium'>PROGRAM SCHEDULE</Link></li>
                         <li><Link to="/proceedings" className='text-[#357F70] font-medium'>PROCEEDINGS</Link></li>
                         <li><Link to="/Committees" className='text-[#357F70] font-medium'>COMMITTEES</Link></li>
                         <li><Link to="/importantlinks" className='text-[#357F70] font-medium'>IMPORTANT LINKS</Link></li>
@@ -52,7 +52,7 @@ const NavBar = () => {
                         <li><Link to="/callforpapers" className='text-[#357F70] font-medium'>CALL FOR PAPERS</Link></li>
                         <li><Link to="/speakers" className='text-[#357F70] font-medium'>SPEAKERS</Link></li>
                         {/* <li><Link to="/registration" className='text-[#357F70] font-medium'>REGISTRATION</Link></li> */}
-                        <li><Link to="/importantdates" className='text-[#357F70] font-medium'>IMPORTANT DATES</Link></li>
+                        <li><Link to="/importantdates" className='text-[#357F70] font-medium'>PROGRAM SCHEDULE</Link></li>
                         <li><Link to="/proceedings" className='text-[#357F70] font-medium'>PROCEEDINGS</Link></li>
                         <li><Link to="/Committees" className='text-[#357F70] font-medium'>COMMITTEES</Link></li>
                         <li><Link to="/importantlinks" className='text-[#357F70] font-medium'>IMPORTANT LINKS</Link></li>
