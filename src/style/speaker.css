@@ -1,0 +1,133 @@
+/* src/components/SpeakerGrid.css
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .grid-item {
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.2s;
+  }
+  
+  .grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .grid-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .grid-item h3 {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  .modal-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+  
+  .modal-section {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .modal-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  .modal-section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px dashed #ddd;
+    margin: 20px 0;
+  }
+
+  .title {
+    font-size: large;
+    font-weight: 400;
+  }
+
+  .bio {
+    width: 800px;
+    height: max-content
+  } */
+
+  .pdf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+    padding: 20px;
+    height: 250px;
+  }
+  
+  .pdf-item {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+  
+  .pdf-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .pdf-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90%;
+    height: 700%;
+    overflow: auto;
+  }
+  
+  .pdf-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+  }
+  
