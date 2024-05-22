@@ -122,6 +122,7 @@
     max-width: 90%;
     max-height: 90%;
     overflow: auto;
+    z-index: 10;
   }
   
   .pdf-modal-overlay {

@@ -6,7 +6,6 @@ import '../../style/speaker.css';
 // import '../../asset/speakers.pdf'
 
  const Speaker = () => {
-
   const generatePdfDirectory = (start, end) => {
     const pdfDirectory = [];
   
@@ -20,18 +19,12 @@ import '../../style/speaker.css';
   };
   
 
-  const pdfDirectory = generatePdfDirectory(0, 43);
+  const pdfDirectory = generatePdfDirectory(0, 42);
   
-  // const pdfDirectory = [
-  //   'assets/speakers-bio/001.pdf',
-  //   'assets/speakers-bio/002.pdf',
-  //   'assets/speakers-bio/003.pdf',
-  //   'assets/speakers-bio/004.pdf',
-  // ]
 
   const [selectedPdf, setSelectedPdf] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [numPages, setNumPages] = useState(null);
 
 
   const openModal = (pdf) => {
@@ -42,6 +35,11 @@ import '../../style/speaker.css';
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedPdf(null);
+    setNumPages(null);
+  };
+
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
   };
 
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -64,8 +62,13 @@ import '../../style/speaker.css';
         key={selectedPdf}
       >
         {selectedPdf && (
-          <Document file={selectedPdf}>
-            <Page pageNumber={1} />
+          <Document file={selectedPdf} onLoadSuccess={onDocumentLoadSuccess}>
+            {Array.from(
+              new Array(numPages),
+              (el, index) => (
+                <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+              )
+            )}
           </Document>
         )}
       </Modal>
