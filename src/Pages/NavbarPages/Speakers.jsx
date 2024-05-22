@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import '../../style/speaker.css';
 import { faWindowRestore } from '@fortawesome/free-solid-svg-icons';
 
-import speakers from '../../asset/speakers.pdf'
+// import speakers from '../../asset/speakers.pdf'
 
  const Speaker = () => {
   const generatePdfDirectory = (start, end) => {
@@ -13,8 +13,8 @@ import speakers from '../../asset/speakers.pdf'
     for (let i = start; i <= end; i++) {
       // Pad the number with leading zeros to ensure it is three digits
       const fileNumber = String(i).padStart(3, '0');
-      // pdfDirectory.push(`assets/speakers-bio/ICTSE24-${fileNumber}.pdf`);
-      pdfDirectory.push(speakers);
+      pdfDirectory.push(`assets/speakers-bio/ICTSE24-${fileNumber}.pdf`);
+      // pdfDirectory.push(speakers);
     }
     return pdfDirectory;
   };
