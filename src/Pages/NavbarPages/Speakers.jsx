@@ -45,34 +45,39 @@ import '../../style/speaker.css';
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
   return (
-    <div className="pdf-grid">
-      {pdfDirectory.map((pdf, index) => (
-        <div key={index} className="pdf-item" onClick={() => openModal(pdf)}>
-          <Document file={pdf}>
-            <Page pageNumber={1} width={150} />
-          </Document>
-        </div>
-      ))}
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="PDF Modal"
-        className="pdf-modal"
-        overlayClassName="pdf-modal-overlay"
-        key={selectedPdf}
-      >
-        {selectedPdf && (
-          <Document file={selectedPdf} onLoadSuccess={onDocumentLoadSuccess}>
-            {Array.from(
-              new Array(numPages),
-              (el, index) => (
-                <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-              )
-            )}
-          </Document>
-        )}
-      </Modal>
+
+    <div className='text-center'>
+      <div className='bg-[#357f70] text-white p-2'>ICTSE 2024 SPEAKERS</div>
+      <div className="pdf-grid">
+        {pdfDirectory.map((pdf, index) => (
+          <div key={index} className="pdf-item" onClick={() => openModal(pdf)}>
+            <Document file={pdf}>
+              <Page pageNumber={1} width={150} />
+            </Document>
+          </div>
+        ))}
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={closeModal}
+          contentLabel="PDF Modal"
+          className="pdf-modal"
+          overlayClassName="pdf-modal-overlay"
+          key={selectedPdf}
+        >
+          {selectedPdf && (
+            <Document file={selectedPdf} onLoadSuccess={onDocumentLoadSuccess}>
+              {Array.from(
+                new Array(numPages),
+                (el, index) => (
+                  <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+                )
+              )}
+            </Document>
+          )}
+        </Modal>
+      </div>
     </div>
+
   );
  }
 
