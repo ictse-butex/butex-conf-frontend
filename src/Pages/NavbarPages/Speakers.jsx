@@ -2,8 +2,9 @@ import React, { useEffect, useState, } from 'react';
 import { pdfjs, Document, Page } from 'react-pdf';
 import Modal from 'react-modal';
 import '../../style/speaker.css';
+import { faWindowRestore } from '@fortawesome/free-solid-svg-icons';
 
-// import speakers from '../../asset/speakers.pdf'
+import speakers from '../../asset/speakers.pdf'
 
  const Speaker = () => {
   const generatePdfDirectory = (start, end) => {
@@ -12,7 +13,8 @@ import '../../style/speaker.css';
     for (let i = start; i <= end; i++) {
       // Pad the number with leading zeros to ensure it is three digits
       const fileNumber = String(i).padStart(3, '0');
-      pdfDirectory.push(`assets/speakers-bio/ICTSE24-${fileNumber}.pdf`);
+      // pdfDirectory.push(`assets/speakers-bio/ICTSE24-${fileNumber}.pdf`);
+      pdfDirectory.push(speakers);
     }
     return pdfDirectory;
   };
@@ -51,10 +53,11 @@ import '../../style/speaker.css';
         {pdfDirectory.map((pdf, index) => (
           <div key={index} className="pdf-item" onClick={() => openModal(pdf)}>
             <Document file={pdf}>
-              <Page pageNumber={1} width={window.innerWidth} />
+              <Page pageNumber={1} width={150} />
             </Document>
           </div>
         ))}
+        
         <Modal
           isOpen={isModalOpen}
           onRequestClose={closeModal}
@@ -62,16 +65,24 @@ import '../../style/speaker.css';
           className="pdf-modal"
           overlayClassName="pdf-modal-overlay"
           key={selectedPdf}
+          shouldCloseOnEsc
         >
           {selectedPdf && (
-            <Document file={selectedPdf} onLoadSuccess={onDocumentLoadSuccess}>
-              {Array.from(
-                new Array(numPages),
-                (el, index) => (
-                  <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-                )
-              )}
-            </Document>
+            <>
+              <span className='px-3 bg-red-100 text-center cursor-pointer' onClick={closeModal}>
+                <b>
+                  x
+                </b>
+              </span>
+              <Document file={selectedPdf} onLoadSuccess={onDocumentLoadSuccess}>
+                {Array.from(
+                  new Array(numPages),
+                  (el, index) => (
+                    <Page key={`page_${index + 1}`} pageNumber={index + 1}  width={window.innerWidth * 0.85}/>
+                  )
+                )}
+              </Document>
+            </>
           )}
         </Modal>
       </div>
