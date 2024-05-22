@@ -26,6 +26,7 @@ import { faWindowRestore } from '@fortawesome/free-solid-svg-icons';
   const [selectedPdf, setSelectedPdf] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [numPages, setNumPages] = useState(null);
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth * 0.85)
 
 
   const openModal = (pdf) => {
@@ -41,6 +42,7 @@ import { faWindowRestore } from '@fortawesome/free-solid-svg-icons';
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
+    setInnerWidth(window.innerWidth * 0.85)
   };
 
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -69,7 +71,7 @@ import { faWindowRestore } from '@fortawesome/free-solid-svg-icons';
         >
           {selectedPdf && (
             <>
-              <span className='px-3 bg-red-100 text-center cursor-pointer' onClick={closeModal}>
+              <span className='px-3 bg-red-100 text-center cursor-pointer close' onClick={closeModal}>
                 <b>
                   x
                 </b>
@@ -78,7 +80,7 @@ import { faWindowRestore } from '@fortawesome/free-solid-svg-icons';
                 {Array.from(
                   new Array(numPages),
                   (el, index) => (
-                    <Page key={`page_${index + 1}`} pageNumber={index + 1}  width={window.innerWidth * 0.85}/>
+                    <Page key={`page_${index + 1}`} pageNumber={index + 1}  width={innerWidth}/>
                   )
                 )}
               </Document>
